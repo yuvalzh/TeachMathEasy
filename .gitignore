@@ -1,0 +1,35 @@
+# Node specific
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build directory (React often builds to a build/ directory)
+build/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.log
+
+# IDE and editor directories/files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Optional: if you have a docs folder or other folders
+# you'd like to exclude, add them here
+# docs/
