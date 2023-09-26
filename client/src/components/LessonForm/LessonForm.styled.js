@@ -13,9 +13,14 @@ export const InputContainer = styled.div`
 `;
 
 export const Title = styled.h1`
+  display: flex;
   margin-bottom: 10px;
 `;
 
 export const Label = styled.label``;
 
-export const SubmitButton = styled.button``;
+export const SubmitButton = styled.button`
+  display: flex;
+  justify-content: center;
+  width: 100px;
+`;

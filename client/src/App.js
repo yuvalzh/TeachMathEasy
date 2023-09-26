@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import LessonForm from "./components/LessonForm/LessonForm";
+import ScheduleTeacherPage from "./components/Pages/ScheduleTeacherPage";
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -9,11 +9,7 @@ const App = () => {
   //   dispatch(getLessons());
   // }, [dispatch]);
 
-  return (
-    <>
-      <LessonForm />
-    </>
-  );
+  return <ScheduleTeacherPage></ScheduleTeacherPage>;
 };
 
 export default App;
