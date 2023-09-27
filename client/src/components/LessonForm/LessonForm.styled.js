@@ -4,6 +4,7 @@ export const LessonFormContainer = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  justify-content: center;
 `;
 
 export const InputContainer = styled.div`

@@ -8,10 +8,8 @@ import iconCenterInformation from "../../assets/iconCenterInformation.png";
 
 import {
   AppBarContainer,
-  ProfilePicture,
   HelloProfile,
   Button,
-  LogoImage,
   LogoTitle,
 } from "./AppBar.styled";
 
@@ -19,24 +17,18 @@ const AppBar = () => {
   const [acceptButton, setAcceptButton] = useState("Free");
   return (
     <AppBarContainer>
-      <img src={profilePic} height="100" width="100"></img>
+      <img src={profilePic} height="100" width="100" />
       <HelloProfile> Hello Teacher</HelloProfile>
       <Button>
-        <LogoImage>
-          <img src={iconSchedule} height="60"></img>
-        </LogoImage>
+        <img src={iconSchedule} height="60" />
         <LogoTitle> Schedule </LogoTitle>
       </Button>
       <Button>
-        <LogoImage>
-          <img src={iconProfile} height="60"></img>
-        </LogoImage>
+        <img src={iconProfile} height="60" />
         <LogoTitle> Profile </LogoTitle>
       </Button>
       <Button>
-        <LogoImage>
-          <img src={iconCenterInformation} height="60"></img>
-        </LogoImage>
+        <img src={iconCenterInformation} height="60" />
         <LogoTitle> Information Center </LogoTitle>
       </Button>
     </AppBarContainer>

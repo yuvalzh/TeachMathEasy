@@ -6,10 +6,6 @@ export const AppBarContainer = styled.div`
   gap: 15px;
 `;
 
-export const ProfilePicture = styled.image`
-  display: flex;
-`;
-
 export const HelloProfile = styled.h2`
   display: flex;
 `;
@@ -20,10 +16,6 @@ export const Button = styled.button`
   width: 100px;
   gap: 10px;
   align-items: center;
-`;
-
-export const LogoImage = styled.image`
-  display: flex;
 `;
 
 export const LogoTitle = styled.label`

@@ -1,6 +1,8 @@
+import React from "react";
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import TimePicker from "react-time-picker";
+import * as lessonApi from "../../api/lessonApi.js";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "react-time-picker/dist/TimePicker.css";
@@ -20,10 +22,19 @@ const LessonForm = () => {
   const [endLesson, setEndLesson] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log(date);
-    console.log(startLesson);
-    console.log(endLesson);
+    try {
+      e.preventDefault();
+      const lesson = { date, startLesson, endLesson };
+      console.log(lesson);
+      const newLesson = await lessonApi.createLesson(lesson);
+      setDate("");
+      setStartLesson("");
+      setEndLesson("");
+      // show lesson add successfully
+    } catch (error) {
+      // handle with error in the UI
+      console.error("Error fetching data", error);
+    }
   };
 
   return (

@@ -1,5 +1,3 @@
 import axios from "axios";
 
-const url = "http://localhost:5000";
-
-export const fetchLessons = () => axios.get(url);
+export const serverUrl = "http://localhost:5000";
