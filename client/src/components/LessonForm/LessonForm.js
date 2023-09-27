@@ -26,7 +26,7 @@ const LessonForm = () => {
       e.preventDefault();
       const lesson = { date, startLesson, endLesson };
       console.log(lesson);
-      const newLesson = await lessonApi.createLesson(lesson);
+      await lessonApi.createLesson(lesson);
       setDate("");
       setStartLesson("");
       setEndLesson("");

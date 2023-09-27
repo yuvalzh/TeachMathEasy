@@ -4,7 +4,7 @@ import { serverUrl } from "../api/index.js";
 
 export const createLesson = async (lesson) => {
   try {
-    const response = await axios.post(`${serverUrl}/lesson`, lesson);
+    const response = await axios.post(`${serverUrl}/lessons`, lesson);
     console.log("Response:", response.data);
     return response.data;
   } catch (error) {
