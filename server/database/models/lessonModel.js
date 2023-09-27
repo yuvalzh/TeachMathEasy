@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 
-const lessonSchema = mongoose.Schema({
+const LessonSchema = new Schema({
   day: String,
   date: Date,
   startTime: String,
@@ -17,6 +17,6 @@ const lessonSchema = mongoose.Schema({
   isAvailable: Boolean,
 });
 
-const LessonInfo = mongoose.model("LessonInfo", lessonSchema);
+const Lesson = model("Lesson", LessonSchema);
 
-export default LessonInfo;
+export default Lesson;
