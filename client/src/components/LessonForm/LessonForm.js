@@ -18,18 +18,18 @@ import {
 
 const LessonForm = () => {
   const [date, setDate] = useState("");
-  const [startLesson, setStartLesson] = useState("");
-  const [endLesson, setEndLesson] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
 
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const lesson = { date, startLesson, endLesson };
-      console.log(lesson);
+      const lesson = { date, startTime, endTime };
+      // console.log(lesson);
       await lessonApi.createLesson(lesson);
       setDate("");
-      setStartLesson("");
-      setEndLesson("");
+      setStartTime("");
+      setEndTime("");
       // show lesson add successfully
     } catch (error) {
       // handle with error in the UI
@@ -42,15 +42,18 @@ const LessonForm = () => {
       <Title>Add new lesson</Title>
       <InputContainer>
         <Label>Date:</Label>
-        <DatePicker selected={date} onChange={(date) => setDate(date)} />
+        <DatePicker
+          selected={date}
+          onChange={(date) => setDate(new Date(date))}
+        />
       </InputContainer>
       <InputContainer>
         <Label>Start Lesson:</Label>
-        <TimePicker onChange={setStartLesson} value={startLesson} />
+        <TimePicker onChange={setStartTime} value={startTime} />
       </InputContainer>
       <InputContainer>
         <Label>End Lesson:</Label>
-        <TimePicker onChange={setEndLesson} value={endLesson} />
+        <TimePicker onChange={setEndTime} value={endTime} />
       </InputContainer>
       <SubmitButton type="submit">Add Lesson</SubmitButton>
     </LessonFormContainer>
