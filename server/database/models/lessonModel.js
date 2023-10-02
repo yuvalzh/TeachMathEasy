@@ -1,10 +1,18 @@
 import { Schema, model } from "mongoose";
 
 const LessonSchema = new Schema({
-  day: String,
-  date: Date,
-  startTime: String,
-  endTime: String,
+  date: {
+    type: Date,
+    required: true,
+  },
+  startTime: {
+    type: String,
+    required: true,
+  },
+  endTime: {
+    type: String,
+    required: true,
+  },
   age: Number,
   maxParticipants: {
     type: Number,
