@@ -6,7 +6,7 @@ import * as lessonApi from "../../api/lessonApi.js";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "react-time-picker/dist/TimePicker.css";
-import "react-clock/dist/Clock.css";
+// import "react-clock/dist/Clock.css";
 
 import {
   SubmitButton,
@@ -14,6 +14,7 @@ import {
   Label,
   Title,
   InputContainer,
+  TimePickerWrapper,
 } from "./LessonForm.styled";
 
 const LessonForm = () => {
@@ -49,11 +50,17 @@ const LessonForm = () => {
       </InputContainer>
       <InputContainer>
         <Label>Start Lesson:</Label>
-        <TimePicker onChange={setStartTime} value={startTime} />
+        <TimePickerWrapper>
+          <TimePicker
+            onChange={setStartTime}
+            value={startTime}
+            disableClock={true}
+          />
+        </TimePickerWrapper>
       </InputContainer>
       <InputContainer>
         <Label>End Lesson:</Label>
-        <TimePicker onChange={setEndTime} value={endTime} />
+        <TimePicker onChange={setEndTime} value={endTime} disableClock={true} />
       </InputContainer>
       <SubmitButton type="submit">Add Lesson</SubmitButton>
     </LessonFormContainer>
