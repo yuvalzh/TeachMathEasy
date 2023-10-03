@@ -1,8 +1,12 @@
 import { Router } from "express";
-import { createLesson } from "../controllers/lessonsController.js";
+import {
+  createLesson,
+  getAllLessonsByDate,
+} from "../controllers/lessonsController.js";
 
 const lessonRoutes = Router();
 
 lessonRoutes.post("/", createLesson);
+lessonRoutes.get("/", getAllLessonsByDate);
 
 export default lessonRoutes;
