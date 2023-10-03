@@ -10,6 +10,7 @@ const app = express();
 
 app.use(cors());
 
+// routes
 app.use("/api", routes);
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
