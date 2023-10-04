@@ -10,6 +10,7 @@ import "react-time-picker/dist/TimePicker.css";
 
 import {
   SubmitButton,
+  LessonFormSection,
   LessonFormContainer,
   Label,
   Title,
@@ -39,30 +40,36 @@ const LessonForm = () => {
   };
 
   return (
-    <LessonFormContainer onSubmit={handleSubmit}>
-      <Title>Add new lesson</Title>
-      <InputContainer>
-        <Label>Date:</Label>
-        <DatePicker
-          selected={date}
-          onChange={(date) => setDate(new Date(date))}
-        />
-      </InputContainer>
-      <InputContainer>
-        <Label>Start Lesson:</Label>
-        <TimePickerWrapper>
+    <LessonFormContainer>
+      <LessonFormSection onSubmit={handleSubmit}>
+        <Title>Add new lesson</Title>
+        <InputContainer>
+          <Label>Date:</Label>
+          <DatePicker
+            selected={date}
+            onChange={(date) => setDate(new Date(date))}
+          />
+        </InputContainer>
+        <InputContainer>
+          <Label>Start Lesson:</Label>
+          <TimePickerWrapper>
+            <TimePicker
+              onChange={setStartTime}
+              value={startTime}
+              disableClock={true}
+            />
+          </TimePickerWrapper>
+        </InputContainer>
+        <InputContainer>
+          <Label>End Lesson:</Label>
           <TimePicker
-            onChange={setStartTime}
-            value={startTime}
+            onChange={setEndTime}
+            value={endTime}
             disableClock={true}
           />
-        </TimePickerWrapper>
-      </InputContainer>
-      <InputContainer>
-        <Label>End Lesson:</Label>
-        <TimePicker onChange={setEndTime} value={endTime} disableClock={true} />
-      </InputContainer>
-      <SubmitButton type="submit">Add Lesson</SubmitButton>
+        </InputContainer>
+        <SubmitButton type="submit">Add Lesson</SubmitButton>
+      </LessonFormSection>
     </LessonFormContainer>
   );
 };

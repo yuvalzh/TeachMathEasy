@@ -5,5 +5,6 @@ export const LessonListContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  height: 100%;
   align-items: center;
 `;

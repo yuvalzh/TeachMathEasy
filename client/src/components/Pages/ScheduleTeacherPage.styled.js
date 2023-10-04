@@ -2,10 +2,12 @@ import styled from "styled-components";
 export const ScheduleTeacherContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 120px;
+  justify-content: center;
   align-items: center;
   background-color: #ffb6c1;
   height: 1100px;
+  width: 100%;
 `;
 
 export const AppBar = styled.div`

@@ -3,12 +3,15 @@ import styled from "styled-components";
 export const AppBarContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
   gap: 20px;
-  height: 1000px;
+  height: 100%;
 `;
 
 export const HelloProfile = styled.h2`
   display: flex;
+  text-align: center;
   font-family: "Century Gothic", sans-serif;
   font-size: 30px;
 `;

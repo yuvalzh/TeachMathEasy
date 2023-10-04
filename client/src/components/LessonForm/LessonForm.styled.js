@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
-export const LessonFormContainer = styled.form`
+export const LessonFormContainer = styled.div`
+  display: flex;
+  height: 100%;
+`;
+
+export const LessonFormSection = styled.form`
   display: flex;
   flex-direction: column;
   gap: 35px;
+  margin-top: 275px;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 400px;
   border: 2px solid #333;
   padding: 20px; /* Add padding for spacing */
   border-radius: 40px; /* Add rounded corners for a nice look */

@@ -17,15 +17,18 @@ const AppBar = () => {
   const [acceptButton, setAcceptButton] = useState("Free");
   return (
     <AppBarContainer>
-      <img src={profilePic} height="100" width="100" />
-      <HelloProfile> Hello Teacher</HelloProfile>
-      <Button>
-        <img src={iconSchedule} height="60" />
-        <LogoTitle> Schedule </LogoTitle>
-      </Button>
+      <img src={profilePic} height="150" width="150" />
+      <HelloProfile>
+        {" "}
+        Hello <br></br> Teacher
+      </HelloProfile>
       <Button>
         <img src={iconProfile} height="60" />
         <LogoTitle> Profile </LogoTitle>
+      </Button>
+      <Button>
+        <img src={iconSchedule} height="60" />
+        <LogoTitle> Schedule </LogoTitle>
       </Button>
       <Button>
         <img src={iconCenterInformation} height="60" />
